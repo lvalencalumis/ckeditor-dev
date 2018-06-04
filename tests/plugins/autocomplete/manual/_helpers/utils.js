@@ -35,10 +35,9 @@
 		},
 
 		getDataCallback: function( config ) {
-			var dataSource = config.data || DATA;
-
 			config = config || {};
 
+			var dataSource = config.data || DATA;
 			return function( query, range, callback ) {
 				var data = dataSource.filter( function( item ) {
 					return item.name.indexOf( query.toLowerCase() ) == 0;
